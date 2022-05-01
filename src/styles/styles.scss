@@ -1,0 +1,17 @@
+.icon-button {
+  border: none;
+  background: none;
+  padding: 3px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: #ccc;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+  }
+}

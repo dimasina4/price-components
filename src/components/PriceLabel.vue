@@ -44,7 +44,9 @@ export default class PriceLabel extends Vue {
     }
 
     this.label = newValue.trim();
-    this.blur();
+    Vue.nextTick(() => {
+      this.blur();
+    });
   }
 
   toggleEdit() {

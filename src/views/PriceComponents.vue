@@ -26,7 +26,7 @@
       :price.sync="newComponent.price"
       :static-label-edit-mode="true"
       @blur="addComponent"
-      class="price-components__field"
+      class="price-components__field price-components__field--new-component"
     />
   </fieldset>
 </template>
@@ -106,27 +106,15 @@ export default class PriceComponents extends Vue {
   &__field {
     margin-bottom: 8px;
 
+    &--new-component {
+      ::v-deep input {
+        border-color: #ccc;
+      }
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
-  }
-}
-
-.new-price-component {
-  > * {
-    margin-right: 4px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__label {
-    width: 35%;
-  }
-
-  &__value {
-    width: calc(65% - 38px);
   }
 }
 </style>
